@@ -10,6 +10,7 @@ import { logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  console.log(localStorage)
 
   // If a returning user has a session token stored in localStorage
   if (localStorage.jwtToken) {
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const decodedUser = jwt_decode(localStorage.jwtToken);
 
     // Create a preconfigured state we can immediately add to our store
-    const preloadedState = { session: { isAuthenticated: true, user: decodedUser } };
+    const preloadedState = { session: { isAuthenticated: true, currentUser: decodedUser } };
 
     store = configureStore(preloadedState);
 

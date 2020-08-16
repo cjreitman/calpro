@@ -7,7 +7,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <div>
-        <h2>Log an entry here:</h2>
+        <h2>Simple calorie and protein tracking</h2>
       </div>
     );
   }
